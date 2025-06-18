@@ -22,9 +22,19 @@ __To run the built:__
 ./node ./bin/index.js
 ```
 
+## Behavior
+
+- The infeed is taken internally from a repository and run through the pricing service.
+- The pricing methodology (strategy) is selected automátically by the ```PricingResolver```
+
+- If the inbound data can't match any Special Offer, it will be resolved by the FULL-PRICE strategy.
+
+
 ## For Developers
 
-__If inbound data can't match any strategy, it will use FULL PRICE strategy.__
+````
+// Inline comments were added to help you follow the code!
+````
 
 ### To add Special Offers of existing types:
 - Just add the appropriate values in the Conditions repository for that particular Special Offer type.
