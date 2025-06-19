@@ -1,4 +1,4 @@
-import { Cart } from "../types/Cart.js";
+import { Cart } from "./Cart.js";
 
 export function createCart(inlineProd: string[]): Cart {
 

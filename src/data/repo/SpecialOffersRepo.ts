@@ -1,6 +1,6 @@
 import { SpecialOfferFactory } from "../../lib/factory/SpecialOfferFactory.js";
 import { IRepository } from "../../lib/types/IRepository.js";
-import { ISpecialOffer } from "../../lib/types/ISpecialOffer.js";
+import { ISpecialOffer } from "../../lib/types/special-offer/ISpecialOffer.js";
 import { Database } from "../database/DatabasePlugIn.js";
 
 export const getSpecialOffersRepo = () => new SpecialOffersRepo()

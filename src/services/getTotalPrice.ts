@@ -1,7 +1,7 @@
 import { getProdutsRepo } from "../data/repo/ProdutsRepo.js";
 import { getSpecialOffersRepo } from "../data/repo/SpecialOffersRepo.js";
-import { createCart } from "../lib/pricing/createCart.js";
-import { specialOfferResolver } from "../lib/pricing/pricingResolver.js";
+import { createCart } from "../lib/types/cart/createCart.js";
+import { pricingStrategyResolver } from "../lib/pricing/pricingStrategyResolver.js";
 import { SpecialOfferType } from "../lib/types/special-offer/SpecialOfferType.js";
 
 export async function getTotalPrice(inlineProd: string[]) {
@@ -26,7 +26,7 @@ export async function getTotalPrice(inlineProd: string[]) {
 				let price = 0
 				// resolve the pricing logic according to all the possible cases and make
 				// the calculations.
-				price = specialOfferResolver(specialOffer?.type || SpecialOfferType.NONE)(
+				price = pricingStrategyResolver(specialOffer?.type || SpecialOfferType.NONE)(
 					cart[key].quantity,
 					nft.price,
 					specialOffer?.conditions

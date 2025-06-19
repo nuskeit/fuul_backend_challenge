@@ -37,11 +37,11 @@ export class Database {
 			{
 				productCode: "APE",
 				type: "M_X_N",
-				conditions: { every: 2, pay: 1 }
+				conditions: [2, 1]
 			}, {
 				productCode: "PUNK",
 				type: "BULK",
-				conditions: { min: 3, price: 50 }
+				conditions: [3, 50]
 			},
 		]
 		return data
